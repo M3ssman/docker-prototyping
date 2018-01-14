@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  elk-search:
+    image: elasticsearch:alpine
+    container_name: elk-search
+    ports:
+      - 9200:9200
+    volumes: 
+      - "./elasticsearch-config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
+ 
+  elk-head:
+    build: ./elasticsearch-head
+    container_name: elk-head
+    ports:
+      - 9100:9100
+    links:
+      - elk-search
+
