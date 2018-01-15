@@ -1,0 +1,9 @@
+target
+
+# eclipse stuff
+.settings
+.classpath
+.project
+
+# spring stuff
+.springBeans

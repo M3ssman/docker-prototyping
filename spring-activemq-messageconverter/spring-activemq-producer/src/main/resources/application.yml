@@ -1,0 +1,5 @@
+activemq:
+  broker-url: tcp://msg-broker:61616
+  queue:
+    notification: notification
+  

@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  msg-broker:
+    image: "webcenter/activemq"
+    ports:
+     - "8161:8161"
+    expose: 
+     - "61616"
+
+  msg-producer:
+    build: ./spring-activemq-producer
+    links: 
+     - msg-broker
+
+  msg-consumer:
+    build: ./spring-activemq-consumer
+    links: 
+     - msg-broker
