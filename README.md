@@ -5,6 +5,8 @@ Collection of simple Prototypes illustrating common IT-Problems.
   * [spring-activemq-messageconverter](./spring-activemq-messageconverter)
 * Monitoring an Elasticsearch Instance
   * [Elasticsearch with Elastic-Head](./elasticsearch-elastichead)
+* Caching using memcached, Javascript and Typescript
+  * [memcache-typescript](./memcache-typescript)
 
 ## Requirements
 * \*nix Plattform

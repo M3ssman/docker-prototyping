@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  memcache-server:
+    image: memcached:1.5.4-alpine
+    container_name: memcache-server-cnt
+    expose:
+      - 11211
+    command: memcached -vvv  
+
+  memcache-demo:
+    build: .
+    container_name: memcache-demo-cnt
+    links: 
+      - memcache-server
+ 
